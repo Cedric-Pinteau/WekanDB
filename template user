@@ -1,0 +1,22 @@
+// Define the schema for the user model
+var userSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    lists: [String],
+    boards: [{
+        name: [String],
+        fromList: String
+    }],
+    cards: [{
+        title: Boolean,
+        labels: Boolean,
+        color: Boolean,
+        attachments: Boolean,
+        createdDate: Boolean,
+        modifiedDate: Boolean,
+        dueDate: Boolean,
+        endDate: Boolean,
+        fromList: String,
+        fromBoards: String
+    }]
+});
